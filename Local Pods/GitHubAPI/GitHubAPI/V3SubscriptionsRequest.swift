@@ -13,7 +13,9 @@ public struct V3SubscriptionsRequest: V3Request {
     public var pathComponents: [String] {
         return ["users", username, "subscriptions"]
     }
-    public var parameters: [String : Any]? { return [:] }
+    public var parameters: [String : Any]? {
+        return ["per_page": 100]
+    }
 
     public let username: String
 
